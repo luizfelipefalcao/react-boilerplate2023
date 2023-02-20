@@ -9,6 +9,8 @@ import {
   NavLink,
 } from "reactstrap";
 
+import './styles.css';
+
 const links = [
   { href: "/home", text: "Home" },
   { href: "/screenone", text: "Screen One" },
@@ -16,8 +18,8 @@ const links = [
 ];
 
 type NavBarProps = {
-  href?: any,
-  text?: any,
+  href?: string,
+  text?: string,
   className?: any,
 }
 
@@ -38,11 +40,16 @@ export default function NavBar() {
 
   return (
     <div style={{ width: "100vw" }}>
-      <Navbar color="light" light expand="md">
-        <NavbarBrand href="/">reactstrap</NavbarBrand>
-        <NavbarToggler onClick={toggleHandler} />
+      <Navbar color="light" light expand="sm">
+        <NavbarBrand href="/">GameOfThrones</NavbarBrand>
+        <NavbarToggler onClick={toggleHandler} style={{ boxShadow: 'none' }}>
+          <div id="close-icon" className={isOpen ? "open" : ""}>
+            <span></span>
+            <span></span>
+          </div>
+        </NavbarToggler>
         <Collapse isOpen={isOpen} navbar>
-          <Nav className="ml-auto" navbar>
+          <Nav className="customNav" navbar>
             {links.map(createNavItem)}
           </Nav>
         </Collapse>

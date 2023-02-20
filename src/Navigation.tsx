@@ -1,9 +1,9 @@
 import { Routes, Route } from "react-router-dom";
 
-import Header from "../presentation/screens/Header";
-import Home from "../presentation/screens/Home";
-import ScreenOne from "../presentation/screens/ScreenOne";
-import ScreenTwo from "../presentation/screens/ScreenTwo";
+import Header from "./screens/Header";
+import Home from "./screens/Home";
+import ScreenOne from "./screens/ScreenOne";
+import ScreenTwo from "./screens/ScreenTwo";
 
 function Navigation() {
   return (
