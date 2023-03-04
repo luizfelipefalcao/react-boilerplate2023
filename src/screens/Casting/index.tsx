@@ -1,8 +1,8 @@
 import React from "react";
 
-function Home() {
+function Casting() {
   return (
-    <div style={{ color: 'red' }}>
+    <div style={{ color: 'blue' }}>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim quos
         distinctio, voluptates, numquam incidunt, modi ipsum minima laboriosam
@@ -45,7 +45,7 @@ function Home() {
         minus, deserunt odit unde reprehenderit consectetur.
       </p>
     </div>
-  )
+  );
 };
 
-export default Home;
+export default Casting;

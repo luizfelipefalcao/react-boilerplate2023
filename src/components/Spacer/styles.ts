@@ -7,5 +7,4 @@ export interface SpacerProps {
 export const Wrapp = styled.div<SpacerProps>`
     width: 100%;
     height: ${({ height }) => height}em;
-    background-color: green;
 `;
