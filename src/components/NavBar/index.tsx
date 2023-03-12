@@ -61,6 +61,31 @@ export default function NavBar() {
     },
   ]
 
+  const navItemList = [
+    {
+      href: '/',
+      text: 'Home'
+    },
+    {
+      href: '/casting',
+      text: 'Casting'
+    },
+    {
+      href: '/funfacts',
+      text: 'FunFacts'
+    }
+  ]
+
+  const renderNavItem = useCallback((href: string, text: string) => {
+    return (
+      <>
+        <NavItem>
+          <NavLink href={href}>{text}</NavLink>
+        </NavItem>
+      </>
+    )
+  }, []);
+
   const renderDropDownItem = useCallback((href: string, text: string) => {
     return (
       <>
@@ -89,12 +114,7 @@ export default function NavBar() {
         </NavbarToggler>
         <Collapse isOpen={isOpen} navbar>
           <Nav className="customNav" navbar>
-            <NavItem>
-              <NavLink href="/casting">Casting</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="/funfacts">FunFacts</NavLink>
-            </NavItem>
+            {navItemList && navItemList.map((item) => renderNavItem(item.href, item.text))}
             <UncontrolledDropdown nav inNavbar onClick={() => setIsDropDownOpen(!isDropDownOpen)}>
               <DropdownToggle nav>
                 <div className="customDDToggle">

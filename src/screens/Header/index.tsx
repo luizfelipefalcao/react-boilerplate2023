@@ -4,7 +4,6 @@ import axios from "axios";
 import NavBar from "../../components/NavBar/index";
 
 import { HeaderNav } from "./styles";
-import Spacer from "../../components/Spacer";
 
 function Header() {
 
@@ -38,7 +37,6 @@ function Header() {
       <HeaderNav>
         <NavBar />
       </HeaderNav>
-      <Spacer height={1} />
     </>
   );
 };
