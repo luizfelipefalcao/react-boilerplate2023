@@ -18,16 +18,9 @@ import './styles.css';
 
 import GotLogo from '../../assets/got-logo.png';
 
-type DropDownTypes = {
-  href?: string,
-  text?: string
-}
-
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isDropDownOpen, setIsDropDownOpen] = useState(false);
-
-  console.log('>>>>> ', isDropDownOpen)
 
   const toggleHandler = () => {
     setIsOpen(!isOpen);
@@ -78,7 +71,7 @@ export default function NavBar() {
   }, []);
 
   return (
-    <div style={{ width: "100vw" }}>
+    <div style={{ width: "100vw" }} >
       <Navbar color="light" light expand="sm">
         <NavbarBrand
           href="/"
@@ -102,12 +95,11 @@ export default function NavBar() {
             <NavItem>
               <NavLink href="/funfacts">FunFacts</NavLink>
             </NavItem>
-            <UncontrolledDropdown nav inNavbar>
+            <UncontrolledDropdown nav inNavbar className="uncontrolledDropdown">
               <DropdownToggle nav>
                 <>
                   Seasons
                   {' '}
-                  {/* {isDropDownOpen && <IoIosArrowUp />} */}
                   {!isDropDownOpen && <IoIosArrowDown />}
                 </>
               </DropdownToggle>

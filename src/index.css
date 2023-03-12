@@ -12,8 +12,3 @@ code {
     monospace;
 }
 
-@media (min-width: 768px) {
-  body {
-    padding: 0 10vw;
-  }
-}

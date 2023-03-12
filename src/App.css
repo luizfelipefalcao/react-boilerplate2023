@@ -1,4 +1,43 @@
 .App {
-  text-align: center;
+  height: 100vh;
+  background-color: rgba(234, 234, 234, 0.1);
 }
 
+.Navigation {
+  min-height: 90vh;
+  text-align: justify;
+}
+
+@media (width <= 575px) {
+	.Navigation {
+    padding: 1em;
+  }
+}
+
+@media (576px <= width <= 767px) {
+	.Navigation {
+    padding: 1em;
+    margin: 0 2em;
+  }
+}
+
+@media (768px <= width <= 991px) {
+	.Navigation {
+    padding: 1em;
+    margin: 0 6em;
+  }
+}
+
+@media (992px <= width <= 1043px) {
+	.Navigation {
+    padding: 1em;
+    margin: 0 8em;
+  }
+}
+
+@media (width >= 1044px) {
+	.Navigation {
+    padding: 1em;
+    margin: 0 12em;
+  }
+}
