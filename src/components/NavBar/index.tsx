@@ -16,7 +16,7 @@ import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io'
 
 import './styles.css';
 
-import GotLogo from '../../assets/got-logo.png';
+import GotLogo from '../../assets/images/got-logo.png'
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -72,7 +72,7 @@ export default function NavBar() {
 
   return (
     <div style={{ width: "100vw" }} >
-      <Navbar color="light" light expand="sm">
+      <Navbar light expand="sm">
         <NavbarBrand
           href="/"
         >
@@ -95,17 +95,22 @@ export default function NavBar() {
             <NavItem>
               <NavLink href="/funfacts">FunFacts</NavLink>
             </NavItem>
-            <UncontrolledDropdown nav inNavbar className="uncontrolledDropdown">
+            <UncontrolledDropdown nav inNavbar onClick={() => setIsDropDownOpen(!isDropDownOpen)}>
               <DropdownToggle nav>
-                <>
+                <div className="customDDToggle">
                   Seasons
                   {' '}
-                  {!isDropDownOpen && <IoIosArrowDown />}
-                </>
+                  <div>
+                    {isDropDownOpen && <IoIosArrowUp />}
+                    {!isDropDownOpen && <IoIosArrowDown />}
+                  </div>
+                </div>
               </DropdownToggle>
-              <DropdownMenu>
-                {URLList && URLList.map((item) => renderDropDownItem(item.href, item.text))}
-              </DropdownMenu>
+              {isDropDownOpen === true &&
+                <DropdownMenu>
+                  {URLList && URLList.map((item) => renderDropDownItem(item.href, item.text))}
+                </DropdownMenu>
+              }
             </UncontrolledDropdown>
           </Nav>
         </Collapse>
