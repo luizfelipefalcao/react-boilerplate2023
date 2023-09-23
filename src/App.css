@@ -8,35 +8,35 @@
   text-align: justify;
 }
 
-@media (width <= 575px) {
-	.Navigation {
+@media (width <=575px) {
+  .Navigation {
     padding: 0.5em 1em;
   }
 }
 
-@media (576px <= width <= 767px) {
-	.Navigation {
+@media (576px <=width <=767px) {
+  .Navigation {
     padding: 0.5em 1em;
     margin: 0 2em;
   }
 }
 
-@media (768px <= width <= 991px) {
-	.Navigation {
+@media (768px <=width <=991px) {
+  .Navigation {
     padding: 0.5em 1em;
     margin: 0 6em;
   }
 }
 
-@media (992px <= width <= 1043px) {
-	.Navigation {
+@media (992px <=width <=1043px) {
+  .Navigation {
     padding: 0.5em 1em;
     margin: 0 8em;
   }
 }
 
-@media (width >= 1044px) {
-	.Navigation {
+@media (width >=1044px) {
+  .Navigation {
     padding: 0.5em 1em;
     margin: 0 12em;
   }

@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'GotFont';
-  src: url('assets/fonts/GameofThrones.ttf')  format('truetype')
+  src: url('presentation/assets/fonts/GameofThrones.ttf') format('truetype')
 }
 
 body {

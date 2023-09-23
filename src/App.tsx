@@ -1,7 +1,7 @@
-import "./App.css";
 import { BrowserRouter } from "react-router-dom";
+import "./App.css";
 
-import Header from "./screens/Header";
+import Header from "./presentation/screens/Header";
 import Navigation from "./Navigation";
 
 export default function App() {
